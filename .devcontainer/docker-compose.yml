@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  aoc2025:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /bin/bash
+    volumes:
+      - ..:/workspace/aoc2025
+      - type: bind
+        source: /home/${USER}/.ssh
+        target: /home/builder/.ssh
+        consistency: cached

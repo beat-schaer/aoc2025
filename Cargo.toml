@@ -1,0 +1,5 @@
+[workspace]
+members = ["day01"]
+
+[workspace.dependencies]
+anyhow = "1"

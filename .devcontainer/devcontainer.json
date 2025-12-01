@@ -1,0 +1,24 @@
+{
+  "name": "AOC2025 devcontainer",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "aoc2025",
+  "overrideCommand": true,
+  "workspaceFolder": "/workspace/aoc2025",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": null
+      },
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "vadimcn.vscode-lldb",
+        "tamasfe.even-better-toml",
+        "fill-labs.dependi",
+        "mhutchie.git-graph",
+        "asciidoctor.asciidoctor-vscode",
+        "grimmer.vscode-back-forward-button"
+      ]
+    }
+  },
+  "remoteUser": "builder"
+}
