@@ -17,8 +17,9 @@ impl Dial {
     }
 
     pub fn rotate_right(self: &mut Self, delta: i32) -> (i32, i32) {
-        let mut part2_zero_clicks = 0;
-        for _ in 0..delta {
+        let mut part2_zero_clicks = delta / 100;
+        let rest_delta = delta % 100;
+        for _ in 0..rest_delta {
             self.current_pos += 1;
             if self.current_pos == 100 {
                 self.current_pos = 0;
@@ -29,8 +30,9 @@ impl Dial {
     }
 
     pub fn rotate_left(self: &mut Self, delta: i32) -> (i32, i32) {
-        let mut part2_zero_clicks = 0;
-        for _ in 0..delta {
+        let mut part2_zero_clicks = delta / 100;
+        let rest_delta = delta % 100;
+        for _ in 0..rest_delta {
             self.current_pos -= 1;
             if self.current_pos == 0 {
                 part2_zero_clicks += 1;
