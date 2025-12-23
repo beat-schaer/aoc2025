@@ -1,9 +1,13 @@
 {
   "name": "AOC2025 devcontainer",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "aoc2025",
-  "overrideCommand": true,
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "workspaceFolder": "/workspace/aoc2025",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/aoc2025,type=bind",
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/builder/.ssh,type=bind,consistency=cached"
+  ],
   "customizations": {
     "vscode": {
       "settings": {
