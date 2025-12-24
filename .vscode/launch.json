@@ -5,29 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug executable 'day01'",
-            "type": "lldb",
-            "request": "launch",
-            "cargo": {
-                "args": [
-                    "run",
-                    "--bin=day01"
-                ]
-            },
-            "args": [],
-            "initCommands": [
-                "settings set target.disable-aslr false"
-            ],
-            ""
-        },
-        {
-            "name": "Debug unit tests in executable 'day01'",
+            "name": "Debug unit tests in executable 'day03'",
             "type": "lldb",
             "request": "launch",
             "cargo": {
                 "args": [
                     "test",
-                    "--bin=day01"
+                    "--bin=day03"
                 ]
             },
             "initCommands": [
